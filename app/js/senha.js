@@ -4,7 +4,7 @@ setTimeout(function () {
 
 }, 10000);
 const https = require('https');
-
+const querystring = require('querystring');
 // const localStorage = require('localStorage');
 
 let fila_id = localStorage.getItem('fila.id');
@@ -98,7 +98,7 @@ const getSenhaAPI = (token) => {
             data = JSON.parse(data);
             console.log(data);
             divsSelect(data)
-            for (var i = 0; i < data.length; i-4) {
+            for (var i = 0; i < data.length; i++) {
                 let obj = data[i];
                 //criarLi('#divUl', "li margin", "li", "senha", obj.id, obj.senha, spanText);
                 divsSelect();
