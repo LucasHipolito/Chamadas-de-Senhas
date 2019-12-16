@@ -32,19 +32,19 @@ const divsSelect  = (data) => {
 
     // .value = data[0].senha.guiche;
     var div1 = document.getElementById('senhaAtualNumero');
-    div1.innerText = "" + data[0].senha +" "+ data[0].guiche;
+    div1.innerText = "" + data[3].senha +" "+ data[3].guiche;
 
     // .value = data[1].senha.guiche;
     var div2 = document.getElementById('ultimaSenhaNumero');
-    div2.innerText = "" + data[1].senha +" "+ data[1].guiche;
+    div2.innerText = "" + data[2].senha +" "+ data[2].guiche;
 
     // .value = data[2].senha.guiche;
     var div3 = document.getElementById('anteriorSenhaNumero');
-    div3.innerText = "" + data[2].senha +" "+ data[2].guiche;
+    div3.innerText = "" + data[1].senha +" "+ data[1].guiche;
 
     // .value = data[3].senha.guiche;
     var div4 = document.getElementById('antepenultimaSenhaNumero');
-    div4.innerText = "" + data[3].senha +" "+ data[3].guiche;
+    div4.innerText = "" + data[0].senha +" "+ data[0].guiche;
 
 }
 
@@ -98,7 +98,7 @@ const getSenhaAPI = (token) => {
             data = JSON.parse(data);
             console.log(data);
             divsSelect(data)
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 3; i < data.length; i--) {
                 let obj = data[i];
                 //criarLi('#divUl', "li margin", "li", "senha", obj.id, obj.senha, spanText);
                 divsSelect();
