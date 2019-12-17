@@ -21,7 +21,7 @@ app.on('ready', () => { // (APP, GERENCIA EVENTOS)
     // ready-to-show, é executado quando o html estiver pronto para ser exibido.
     mainWindow.on('ready-to-show', () => {
         mainWindow.show();
-        mainWindow.webContents.openDevTools();
+        // mainWindow.webContents.openDevTools();
 
     });
 
